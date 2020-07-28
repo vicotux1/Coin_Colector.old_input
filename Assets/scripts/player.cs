@@ -15,9 +15,9 @@ public class player : MonoBehaviour {
 	float _Speed=10.0f;
 	Rigidbody _Cuerpo;
 	[Header ("Camara Follow")]
-	[SerializeField]
+	//[SerializeField]
 	Camera Main;
-	[SerializeField]
+	//[SerializeField]
 	Vector3 _Distancia_a_seguir;
 
 	int	_contador=0;
@@ -30,10 +30,12 @@ public class player : MonoBehaviour {
 
 	void Start () {
 		_Cuerpo=GetComponent<Rigidbody>();
+		Main=Camera.main;
 		Main.transform.position = transform.position + _Distancia_a_seguir;
 		_contador= 0;
 		Puntacion ();
 		Ganaste.enabled = false;
+		_Distancia_a_seguir= new Vector3 (0, 7.5f, -3);
 	}
 	void FixedUpdate () 
 	{
