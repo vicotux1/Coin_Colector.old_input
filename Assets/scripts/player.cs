@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody))]
 #endregion
 public class player : MonoBehaviour {
-#region Variables Public
+	#region Variables Public
 	[Header ("Control personaje")]
 	[Range (1, 2)][SerializeField]int SerialID=1;
 	[SerializeField]string _Horizontal="Horizontal";
@@ -23,14 +23,16 @@ public class player : MonoBehaviour {
 	[SerializeField][Range (0.01f, 1.0f)]float smoothSpeed=0.1f;
 	[SerializeField] [Range (-5.0f, 5.0f)]float CamH, CamV;
 	[SerializeField]string AxisX, AxisY;
-#endregion
-#region Variables Private
+	#endregion
+	
+	#region Variables Private
 	int	_contador=0;
 	Rigidbody _Cuerpo;
 	Camera Main;
 	float AngleX,AngleY;
 	#endregion
-#region Functions Unity 
+	
+	#region Functions Unity 
 	void Start () {
 		_Cuerpo=GetComponent<Rigidbody>();
 		Main=Camera.main;
@@ -52,6 +54,7 @@ public class player : MonoBehaviour {
 		Camera_follow();
 	}
 	#endregion
+	
 	#region Functions Movement
 	void Mover(float RotateH){
 		float EjeHorizontal = Input.GetAxis (_Horizontal);
@@ -76,6 +79,7 @@ public class player : MonoBehaviour {
 			Main.transform.eulerAngles = new Vector3(RotX, RotY, 0.0f);
 		}
 	#endregion	
+	
 	#region Contador
 	void OnTriggerEnter(Collider other){
 		Destroy (other.gameObject);
@@ -86,5 +90,5 @@ public class player : MonoBehaviour {
 		if( _contador==Total_Monedas)
 		{Ganaste.enabled = true;}
 		}
-		#endregion
-}
+	#endregion
+	}
