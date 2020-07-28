@@ -5,27 +5,26 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class player : MonoBehaviour {
-	[Header ("Control personaje")]
-	[SerializeField]
-	string _Horizontal="Horizontal";
-	[SerializeField]
-	string _Vertical="Vertical";
-	[Range (5.0f, 20.0f)]
-	[SerializeField]
-	float _Speed=10.0f;
-	Rigidbody _Cuerpo;
-	[Header ("Camara Follow")]
-	//[SerializeField]
-	Camera Main;
-	//[SerializeField]
-	Vector3 _Distancia_a_seguir;
 
-	int	_contador=0;
+	// SerializeField
+	[Header ("Control personaje")]
+	[SerializeField]string _Horizontal="Horizontal";
+	[SerializeField]string _Vertical="Vertical";
+	[Range (5.0f, 20.0f)][SerializeField]float _Speed=10.0f;
+	
 	[Header ("Elementos UI")]
-	public Text Puntos;
-	public Text Ganaste;
-	[SerializeField]
-	int Total_Monedas=11;
+	[SerializeField] string Texto_A_Mostrar;
+	[SerializeField] Text Puntos, Ganaste;
+	[Header ("Points")]
+	[SerializeField][Range (1, 100)]int Total_Monedas=11;
+	
+	[Header ("Camera Follow")]
+	[SerializeField] Vector3 _Distancia_a_seguir;
+	[SerializeField][Range (0.01f, 1.0f)]float smoothSpeed=0.1f;
+	// Private 
+	int	_contador=0;
+	Rigidbody _Cuerpo;
+	Camera Main;
 
 
 	void Start () {
@@ -35,7 +34,7 @@ public class player : MonoBehaviour {
 		_contador= 0;
 		Puntacion ();
 		Ganaste.enabled = false;
-		_Distancia_a_seguir= new Vector3 (0, 7.5f, -3);
+		//_Distancia_a_seguir= Vector3.zero;
 	}
 	void FixedUpdate () 
 	{
@@ -56,7 +55,9 @@ public class player : MonoBehaviour {
 	}
 	void Camera_follow()
 	{
-		Main.transform.position = transform.position +_Distancia_a_seguir;
+		Vector3 Seguir=transform.position +_Distancia_a_seguir;
+		Vector3 Smooth=Vector3.Lerp(Main.transform.position,Seguir,smoothSpeed);
+		Main.transform.position = Smooth;
 
 	}
 
@@ -70,7 +71,7 @@ public class player : MonoBehaviour {
 	}
 	void Puntacion()
 	{
-		Puntos.text = "Puntos: "+ _contador;
+		Puntos.text = Texto_A_Mostrar + _contador;
 		if( _contador==Total_Monedas)
 		{
 			Ganaste.enabled = true;
