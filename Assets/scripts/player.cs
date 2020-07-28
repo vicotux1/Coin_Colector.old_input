@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 [RequireComponent(typeof(Rigidbody))]
 #endregion
 public class player : MonoBehaviour {
@@ -24,12 +23,14 @@ public class player : MonoBehaviour {
 	[SerializeField] [Range (-5.0f, 5.0f)]float CamH, CamV;
 	[SerializeField]string AxisX, AxisY;
 #endregion
+
 #region Variables Private
 	int	_contador=0;
 	Rigidbody _Cuerpo;
 	Camera Main;
 	float AngleX,AngleY;
-	#endregion
+#endregion
+
 #region Functions Unity 
 	void Start () {
 		_Cuerpo=GetComponent<Rigidbody>();
@@ -51,8 +52,9 @@ public class player : MonoBehaviour {
 		Camera_Rotate(AngleX, AngleY);
 		Camera_follow();
 	}
-	#endregion
-	#region Functions Movement
+#endregion
+
+#region Functions Movement
 	void Mover(float RotateH){
 		float EjeHorizontal = Input.GetAxis (_Horizontal);
 		float EjeVertical = Input.GetAxis (_Vertical);
@@ -75,8 +77,9 @@ public class player : MonoBehaviour {
 		void Camera_Rotate(float RotX, float RotY){
 			Main.transform.eulerAngles = new Vector3(RotX, RotY, 0.0f);
 		}
-	#endregion	
-	#region Contador
+#endregion	
+
+#region Contador
 	void OnTriggerEnter(Collider other){
 		Destroy (other.gameObject);
 		_contador = _contador + 1;
@@ -85,6 +88,6 @@ public class player : MonoBehaviour {
 		Puntos.text = Texto_A_Mostrar + _contador;
 		if( _contador==Total_Monedas)
 		{Ganaste.enabled = true;}
-		}
-		#endregion
+	}
+#endregion
 }
