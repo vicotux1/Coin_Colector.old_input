@@ -116,6 +116,10 @@ MonoBehaviour:
   Total_Monedas: 11
   _Distancia_a_seguir: {x: 0, y: 3.5, z: -6}
   smoothSpeed: 0.1
+  CamH: 0
+  CamV: 3
+  AxisX: MouseX
+  AxisY: MouseY
 --- !u!54 &54522610385347094
 Rigidbody:
   m_ObjectHideFlags: 0
