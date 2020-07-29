@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody))]
-#endregion
 public class player : MonoBehaviour {
+#endregion
+
 #region Variables Public
 	[Header ("Control personaje")]
 	[Range (1, 2)][SerializeField]int SerialID=1;
