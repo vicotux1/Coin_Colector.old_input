@@ -6,8 +6,12 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody))]
 public class player : MonoBehaviour {
 #endregion
-
+public static int	_contador=0;
 #region Variables Public
+	
+	[SerializeField]AudioClip Coin;
+	[SerializeField]AudioClip Winer;
+
 	[Header ("Control personaje")]
 	[SerializeField]string _Horizontal="Horizontal";
 	[SerializeField]string _Vertical="Vertical";
@@ -24,15 +28,16 @@ public class player : MonoBehaviour {
 #endregion
 
 #region Variables Private
-	int	_contador=0;
 	Rigidbody _Cuerpo;
 	Camera Main;
 	float AngleX,AngleY;
+	AudioSource Audio;
 #endregion
 
 #region Functions Unity 
 	void Start () {
 		_Cuerpo=GetComponent<Rigidbody>();
+		Audio=GetComponent<AudioSource>();
 		Main=Camera.main;
 		Main.transform.position = transform.position + _Distancia_a_seguir;
 		_contador= 0;
@@ -62,12 +67,16 @@ public class player : MonoBehaviour {
 #region Contador
 	void OnTriggerEnter(Collider other){
 		Destroy (other.gameObject);
+		Audio.clip = Coin;
+		Audio.Play();
 		_contador = _contador + 1;
 		Puntacion();}
 	void Puntacion(){
 		Puntos.text = Texto_A_Mostrar + _contador;
 		if( _contador==Total_Monedas)
-		{Ganaste.enabled = true;}
+		{	Audio.clip = Winer;
+			Audio.Play();
+			Ganaste.enabled = true;}
 	}
 #endregion
 }
