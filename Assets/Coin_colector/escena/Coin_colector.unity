@@ -1274,6 +1274,11 @@ PrefabInstance:
       propertyPath: Ganaste
       value: 
       objectReference: {fileID: 932651552}
+    - target: {fileID: 114815521357285200, guid: 340b2b21cb4764841a2460253f9dd716,
+        type: 3}
+      propertyPath: Total_Monedas
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 340b2b21cb4764841a2460253f9dd716, type: 3}
 --- !u!1001 &446908795
@@ -4572,6 +4577,10 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 291127515}
+    - target: {fileID: 989039977, guid: aa08ec92f5133b9a08a3502fa720ead8, type: 3}
+      propertyPath: m_IsOn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1999054744, guid: aa08ec92f5133b9a08a3502fa720ead8, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
