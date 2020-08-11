@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1739828662808732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +75,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a68dde3cb7059e1418e031d31a9bd61a, type: 2}
+  - {fileID: 2100000, guid: a80ae128c1c84cd04a77f5f7272dacb4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,10 +116,10 @@ MonoBehaviour:
   Texto_A_Mostrar: 'Point:  '
   Puntos: {fileID: 0}
   Ganaste: {fileID: 0}
-  Total_Monedas: 2
-  _Distancia_a_seguir: {x: 1, y: 5, z: -3}
-  smoothSpeed: 1
-  RotX: 45
+  Total_Monedas: 11
+  _Distancia_a_seguir: {x: 1, y: 7, z: -2.5}
+  smoothSpeed: 0.5
+  RotX: 60
   RotY: 0
 --- !u!54 &54522610385347094
 Rigidbody:

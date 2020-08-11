@@ -9,8 +9,8 @@ public class player : MonoBehaviour {
 public static int	_contador=0;
 #region Variables Public
 	
-	[SerializeField]AudioClip Coin;
-	[SerializeField]AudioClip Winer;
+	public AudioClip Coin;
+	public AudioClip Winer;
 
 	[Header ("Control personaje")]
 	[SerializeField]string _Horizontal="Horizontal";

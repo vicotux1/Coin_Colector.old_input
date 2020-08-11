@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEditor;
 #endif
 public class Menu : MonoBehaviour
-{public void Quit(){
+{
+	public void Quit(){
         #if UNITY_EDITOR 
         EditorApplication.isPlaying = false;
         #else
