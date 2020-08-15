@@ -8,19 +8,18 @@ public class player : MonoBehaviour {
 #endregion
 public static int	_contador=0;
 #region Variables Public
-	
+	[Header ("Coin Music")]
 	public AudioClip Coin;
 	public AudioClip Winer;
-
 	[Header ("Control personaje")]
 	[SerializeField]string _Horizontal="Horizontal";
 	[SerializeField]string _Vertical="Vertical";
 	[Range (2.0f, 20.0f)][SerializeField]float _Speed=10.0f;
-	[Header ("Elementos UI")]
+	/*[Header ("Elementos UI")]
 	[SerializeField] string Texto_A_Mostrar="Points:";
 	public Text Puntos, Ganaste;
 	[Header ("Points")]
-	[SerializeField][Range (1, 100)]int Total_Monedas=11;
+	[SerializeField][Range (1, 100)]int Total_Monedas=11;*/
 	[Header ("Camera Follow")]
 	[SerializeField] Vector3 _Distancia_a_seguir=Vector3.zero;
 	[SerializeField][Range (0.01f, 1.0f)]float smoothSpeed=0.1f;
@@ -40,9 +39,9 @@ public static int	_contador=0;
 		Audio=GetComponent<AudioSource>();
 		Main=Camera.main;
 		Main.transform.position = transform.position + _Distancia_a_seguir;
-		_contador= 0;
-		Puntacion ();
-		Ganaste.enabled = false;
+		//_contador= 0;
+		//Puntacion ();
+		//Ganaste.enabled = false;
 		Cursor.visible = false;
 		}
 	void FixedUpdate () {Mover ();}
@@ -65,7 +64,7 @@ public static int	_contador=0;
 	#endregion	
 
 #region Contador
-	void OnTriggerEnter(Collider other){
+	/*void OnTriggerEnter(Collider other){
 		Destroy (other.gameObject);
 		Audio.clip = Coin;
 		Audio.Play();
@@ -77,6 +76,6 @@ public static int	_contador=0;
 		{	Audio.clip = Winer;
 			Audio.Play();
 			Ganaste.enabled = true;}
-	}
+	}*/
 #endregion
 }
