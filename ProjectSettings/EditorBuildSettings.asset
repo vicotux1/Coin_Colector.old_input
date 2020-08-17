@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Coin_colector/escena/Main_menu.unity
     guid: 0679fc8c8a29a102babde1094d437641
   - enabled: 1
-    path: Assets/Coin_colector/escena/Coin_colector.unity
-    guid: b78b3c4e69e4cd6dc8bc069539eaafeb
+    path: Assets/Coin_colector/escena/Coin_colector_01.unity
+    guid: b61528f0968122aad80582504ecb583b
+  - enabled: 1
+    path: Assets/Coin_colector/escena/Coin_colector_02.unity
+    guid: d78f0b27701c50f6abdb01b6cdb1e727
   m_configObjects: {}

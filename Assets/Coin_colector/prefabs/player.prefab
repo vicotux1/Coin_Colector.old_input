@@ -107,15 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6468cced59ae794fa232cd60727a604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coin: {fileID: 8300000, guid: a094a681f6d6301c2b1c457e44a9bdd1, type: 3}
-  Winer: {fileID: 8300000, guid: 56d35eb5055675c449eb77feeb41adbe, type: 3}
+  Posicion_inicial: {x: 0.65, y: 0, z: 3.9}
   _Horizontal: Horizontal
   _Vertical: Vertical
   _Speed: 10
-  _Distancia_a_seguir: {x: 1, y: 7, z: -2.5}
-  smoothSpeed: 0.5
-  RotX: 60
-  RotY: 0
 --- !u!54 &54522610385347094
 Rigidbody:
   m_ObjectHideFlags: 0
