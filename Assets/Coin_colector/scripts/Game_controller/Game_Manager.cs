@@ -31,6 +31,7 @@ public class Game_Manager : MonoBehaviour
     live_text.text=" "+Life;
     _contador=0;    
     Audio=GetComponent<AudioSource>();
+    nivel_text.text="";
 
 	Cursor.visible = false;
     if (estancia!=null){
