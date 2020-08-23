@@ -730,6 +730,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bb172e6bb28dd536a56db788c4caa58, type: 3}
+--- !u!82 &461759157 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7578601103968802775, guid: 2bb172e6bb28dd536a56db788c4caa58,
+    type: 3}
+  m_PrefabInstance: {fileID: 461759156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &490649767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3602,6 +3608,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964841577072884083, guid: aa08ec92f5133b9a08a3502fa720ead8,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 461759157}
+    - target: {fileID: 3964841577072884083, guid: aa08ec92f5133b9a08a3502fa720ead8,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964841577072884083, guid: aa08ec92f5133b9a08a3502fa720ead8,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4011436090359211998, guid: aa08ec92f5133b9a08a3502fa720ead8,
         type: 3}
