@@ -13,12 +13,24 @@ public class pause_manager : MonoBehaviour {
 	void Start(){
 	canvasPausa.enabled = false;
 	Time.timeScale = 1;
+	Cursor.visible = false;
 	}
+	public void Resolution480p (){
+		 Screen.SetResolution(848, 480, false);
+		}
+	public void Resolution600p (){
+		 Screen.SetResolution(1024, 600, false);
+		}	
+		public void Resolution720p (){
+		 Screen.SetResolution(1280, 720, false);
+		}
+		public void Resolution1080p (){
+		 Screen.SetResolution(1920, 1080, false);
+		}
 	void Update(){
 		if (Input.GetButtonDown ("Cancel")){
 			Pause();}
 			}
-
 	#endregion
 	#region Pause		
     public void Pause(){
@@ -35,7 +47,12 @@ public class pause_manager : MonoBehaviour {
 	}
 	public void Vsync(int Vsync){
 	QualitySettings.vSyncCount = Vsync;
-	}	
+	}
+	public void fullScreen(){
+	Screen.fullScreen = !Screen.fullScreen;
+	}
+
+		
 	public void Quit(){
      #if UNITY_EDITOR 
     EditorApplication.isPlaying = false;

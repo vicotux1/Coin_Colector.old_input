@@ -123,8 +123,16 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 0
-  bundleVersion: 1.5.02_level_select_OLD_Input
-  preloadedAssets: []
+  bundleVersion: 1.5.4_Mundo_1
+  preloadedAssets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -169,7 +177,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.VicotuxGames.Coin_colector
   buildNumber:
-    Standalone: 1.0
+    Standalone: 1.5.4_Mundo_1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
@@ -625,7 +633,7 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 3cb4cac9da12d1cce9e3a743e42afb99,
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 05677063d557507dabfeb1d2f637edd1,
     type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 1
